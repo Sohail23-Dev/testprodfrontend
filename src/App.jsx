@@ -17,13 +17,13 @@ function App() {
       const response = await fetch(`${API_URL}/user-details`);
       
       if (!response.ok) {
-        throw new Error('Failed to fetch user details');
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
       
       const data = await response.json();
       setUserDetails(data);
     } catch (err) {
-      setError(err.message);
+      setError(err.message || 'Network error occurred');
     } finally {
       setLoading(false);
     }
