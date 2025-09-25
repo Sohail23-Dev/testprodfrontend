@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 // Use environment variable for API URL
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://user-details-backend-9clh.onrender.com';
 
 function App() {
   const [userDetails, setUserDetails] = useState(null);
